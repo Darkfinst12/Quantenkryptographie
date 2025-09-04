@@ -1,0 +1,47 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 1. Personendaten
+%
+\author[Diener, Roob, B{\'e}k{\'e}si]
+{Irene~Diener, Toni~Roob, Jarod~A.~M.~B{\'e}k{\'e}si}
+\newcommand{\myTitle}{Einf{\"u}hrung in die Quantenkryptographie}
+\newcommand{\myTitleShort}{Quantenkryptographie}
+\title[\myTitleShort]{\myTitle}
+%\subtitle{}
+\newcommand{\myProf}{Prof.~Dr.~habil.~Andriy~Luntovskyy}
+\newcommand{\myAcademy}{Duale Hochschule Sachsen}
+% Vorsicht mit den Begriffen „Studiengang“ und „Studienrichtung“!
+\newcommand{\myStudy}{Studiengang Informationstechnik}
+\newcommand{\myLocation}{Dresden} 
+\newcommand{\myVersion}{Version 1.0}
+% Abgabedatum
+\newcommand{\mySubmissionDate}{30. September 2025}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 2. Packete
+%
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 3. Settings
+%
+\date{\mySubmissionDate}
+
+\logo{\includegraphics[width=2cm]{figures/CD/DHSN-Logo}}
+\setbeamercovered{transparent}
+
+%The next block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{Inhaltsverzeichnis}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
