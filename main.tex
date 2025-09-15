@@ -1,6 +1,10 @@
 \documentclass[11pt]{beamer}
 
-\usetheme{Copenhagen} %metropolis
+\RequirePackage{silence}
+\WarningFilter{remreset}{The remreset package}
+
+\usetheme{Copenhagen} %metropolis#
+\useoutertheme{infolines}
 \usecolortheme{default}
 
 \input{config}
@@ -19,7 +23,27 @@
 		\maketitle
 	\end{frame}
 	
-	\input{sections/test/test}
-
+	\input{sections/recap}
+	\input{sections/OKD/QKD}
 	
+	\section{Gitterbasierte Kryptografie}
+	
+	\section{{\"U}bungen}
+	
+	\section{Zusammenfassung}
+	
+	
+	%*************************************************************************
+	% Literaturverzeichnis
+	%*************************************************************************
+	\section{Quellenverzeichnis}
+	\begin{frame}[allowframebreaks]
+		\frametitle{Quellenverzeichnis}
+		\bibliographystyle{baalphadin}
+		%		\pdfbookmark[-1]{Quellenverzeichnis}{pdf-Bibliography}%
+		%		\phantomsection%
+		% BibTeX:
+		\bibliography{bibliography}
+	\end{frame}
+
 \end{document}
