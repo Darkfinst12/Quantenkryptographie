@@ -22,10 +22,32 @@
 %
 % 2. Packete
 %
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 
+\usepackage{hyphenat}
+\usepackage[ngerman,english]{babel}
+\usepackage[babel]{csquotes}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amstext,amsthm}
+\usepackage{upgreek,units}
+
+\usepackage{ragged2e}
+\usepackage{animate}
+
+\usepackage{graphicx}
+\usepackage{caption,subcaption}
+
+\usepackage[hang,multiple]{footmisc}
+\renewcommand{\footnotemargin}{1.2em}
+\usepackage{longtable,booktabs,multirow,colortbl}
+\usepackage{rotating}
+\usepackage{remreset}
+
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\setlist{noitemsep, itemsep=3pt, topsep=0pt, partopsep=6pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -40,7 +62,7 @@
 %beginning of each section and highlights the current section:
 \AtBeginSection[]
 {
-	\begin{frame}
+	\begin{frame}[allowframebreaks]
 		\frametitle{Inhaltsverzeichnis}
 		\tableofcontents[currentsection]
 	\end{frame}

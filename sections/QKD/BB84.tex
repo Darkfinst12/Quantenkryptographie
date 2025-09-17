@@ -1,4 +1,25 @@
 \subsection{BB84}
-\begin{frame}[allowframebreaks]
-	
+\begin{frame}%[allowframebreaks]
+	\frametitle{BB84}
+	Entwickelt durch Charles Bennett und Gilles Brassard im Jahr 1984
+\end{frame}
+
+\begin{frame}
+	\frametitle{{\"U}bung${^1}$}
+	\begin{block}{Frage}
+		Weshalb sollte Bob die Orientierungen bei seinen Messungen zuf{\"a}llig w{\"a}hlen?\\
+		Welche Gefahr besteht, wenn er f{\"u}r die Orientierungen beispielsweise abwechselnd $h$/$v$ und $+$/$-$ w{\"a}hlt?
+	\end{block}
+	\footnotetext[1]{Quelle \cite{Filk2023BB84}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{{\"U}bung${^1}$}
+	\begin{block}{Antwort}
+	Die Gefahr besteht darin, dass Eve diese Vorliebe von Bob kennt. 
+	\\
+	\justifying
+	In diesem Fall wählt sie dieselben Orientierungen bei den Messungen wie Bob. Wenn Alice und Bob später ihre gewählten Basissysteme vergleichen, erhalten sie dieselben Übereinstimmungen wie Alice und Eve. Bei den Photonen, bei denen die Orientierungen von Eve und Bob sich von denen von Alice unterscheiden, können die Messwerte verschieden sein, doch diese Bits werden verworfen. Bei den Bits, die behalten werden, stimmen Eve, Bob und Alice überein. Alice und Bob werden also nicht bemerken, dass sie belauscht wurden.
+	\end{block}
+	\footnotetext[1]{Quelle \cite{Filk2023BB84}}
 \end{frame}
