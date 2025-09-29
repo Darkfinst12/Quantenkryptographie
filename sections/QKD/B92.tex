@@ -1,4 +1,35 @@
 \subsection{B92}
-\begin{frame}[allowframebreaks]
-	
+\begin{frame}
+	\frametitle{B92}
+	\begin{columns}
+		\begin{column}{0.6\linewidth}
+			-- Zwei beliebige nicht orthogonale Zustände 
+			-- Unterscheidung der Zustände per Phase
+			\hspace{0.5em}
+			\textbf{Beispiel:}\\
+			$|\alpha\rangle = 0$ und $|-\alpha\rangle = 1$\\
+			Bob misst per Homodyn-Detektion den Wert von $q$.\\
+			$\Rightarrow$ Wenn $q$:\\
+			\hspace{0.5em}-- größer als rechte Linie war es $|\alpha\rangle$\\
+			\hspace{0.5em}-- kleiner als linke Linie war es $|-\alpha\rangle$\\
+			\hspace{0.5em}-- Ergebnis ungültig
+		\end{column}
+		\begin{column}{0.39\linewidth}
+			\img{0.75\textwidth}{QKD/B92}{b92}{Visualisierung des B92-Protokolls}{Visualisierung des B92-Protokolls}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Beispiel$^{1}$}
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Gesendet wird & $0^{\circ}$ (1) & $0^{\circ}$ (1) & $45^{\circ}$ (0) & $45^{\circ}$(0) \\
+		\hline
+		Gemessen wird mit & $90^{\circ}$ (0) & $135^{\circ}$ (1) & $90^{\circ}$ (0) & $135^{\circ}$ (1) \\
+		\hline
+		Detektion des Photons? & Nein & Vielleicht (1) & Vielleicht (0) & Nein \\
+		\hline
+	\end{tabular}
+	\footnotetext[1]{Aus \cite{sem_quantencomputing}}
 \end{frame}

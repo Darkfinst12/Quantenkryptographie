@@ -72,3 +72,40 @@
 		\tableofcontents[currentsection]
 	\end{frame}
 }
+
+\addto\extrasngerman{%
+	\renewcommand{\figureautorefname}{Abbildung}
+	\renewcommand{\tableautorefname}{Tabelle}
+	\renewcommand{\subsectionautorefname}{Unterabschnitt}%
+	\renewcommand{\sectionautorefname}{Abschnitt}%
+	\renewcommand{\chapterautorefname}{Kapitel}%
+	\renewcommand{\partautorefname}{Teil}%
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 4. Custom Commands
+%
+\newcounter{thmhelper}[section]
+\setcounter{figure}{\thethmhelper}%
+\addtocounter{thmhelper}{1}%
+
+\usepackage{pdfpages}
+
+% \img{<width>}{<filename>}{<label>}{<short caption>}{<full caption>}
+\newcommand{\img}[5]{%
+	\begin{figure}
+		\centering
+		\includegraphics[width=#1]{figures/#2}%
+		\caption[#4]{#5}\label{fig:#3}%
+	\end{figure}%
+}
+
+\definecolor{darkgreen}{RGB}{0,150,0} % dark green
+
+\newenvironment{myExamples}[1]{
+	\setbeamercolor{block title}{bg=darkgreen, fg=white} % Title background green, text white
+	\setbeamercolor{block body}{bg=darkgreen!10, fg=black}  % Body background light green, text black
+	\begin{block}{#1}}{\end{block}
+}

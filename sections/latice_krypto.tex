@@ -1,4 +1,605 @@
 \section{Gitterbasierte Kryptografie}
-\begin{frame}[allowframebreaks]
+\begin{frame}
+	\begin{tikzpicture}
+		\foreach \x in {-6,...,6}
+			\foreach \y in {-4,...,4}
+				\fill[white] (\x,\y) circle (0.05);
+		
+		\fill[gray!90] (0,0) circle (0.1) node[gray!90, below] at (0,0) {O};
+	\end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+	\begin{tikzpicture}
+		\foreach \x in {-6,...,6}
+			\foreach \y in {-4,...,4}
+				\fill[white] (\x,\y) circle (0.05);
+		
+		\fill[gray!90] (0,0) circle (0.1) node[gray!90, below] at (0,0) {O};
+		\draw[->, line width=0.6mm, blue] (0,0) -- (1,2) node[above, above] {\large $b_1$};
+		\draw[->, line width=0.6mm, blue] (0,0) -- (2,1) node[above, right] {\large $b_2$};
+	\end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+	\begin{tikzpicture}
+		\foreach \x in {-6,...,6}
+			\foreach \y in {-4,...,4}
+				\fill[gray!60] (\x,\y) circle (0.05);
+		
+		\fill[gray!90] (0,0) circle (0.1) node[gray!90, below] at (0,0) {O};
+		\draw[->, line width=0.6mm, blue] (0,0) -- (1,2) node[above, above] {\large $b_1$};
+		\draw[->, line width=0.6mm, blue] (0,0) -- (2,1) node[above, right] {\large $b_2$};
+	\end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+	\begin{tikzpicture}
+		\foreach \x in {-6,...,6}
+			\foreach \y in {-4,...,4}
+				\fill[gray!60] (\x,\y) circle (0.05);
+		
+		\fill[darkgreen!80] (-1.4,2.2) circle (0.1) node[darkgreen!80, below] {t};
+		
+		\fill[gray!90] (0,0) circle (0.1) node[gray!90, below] at (0,0) {O};
+		\draw[->, line width=0.6mm, blue] (0,0) -- (1,2) node[above, above] {\large $b_1$};
+		\draw[->, line width=0.6mm, blue] (0,0) -- (2,1) node[above, right] {\large $b_2$};
+	\end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+	\begin{tikzpicture}
+		\foreach \x in {-6,...,6}
+			\foreach \y in {-4,...,4}
+				\fill[gray!60] (\x,\y) circle (0.05);
+		
+		\fill[darkgreen!80] (-1.4,2.2) circle (0.1) node[darkgreen!80, below] {t};
+		\fill[darkgreen!80] (-1,2) circle (0.1) node[darkgreen!80, below] {v};
+		
+		\fill[gray!90] (0,0) circle (0.1) node[gray!90, below] at (0,0) {O};
+		\draw[->, line width=0.6mm, blue] (0,0) -- (1,2) node[above, above] {\large $b_1$};
+		\draw[->, line width=0.6mm, blue] (0,0) -- (2,1) node[above, right] {\large $b_2$};
+	\end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+	\begin{tikzpicture}
+		\foreach \x in {-6,...,6}
+			\foreach \y in {-4,...,4}
+				\fill[gray!60] (\x,\y) circle (0.05);
+		
+		\fill[gray!90] (0,0) circle (0.1) node[gray!90, below] at (0,0) {O};
+		\draw[->, line width=0.6mm, darkgreen!80] (0,0) -- (0,1) node[above, above] {\large $r_1$};
+		\draw[->, line width=0.6mm, darkgreen!80] (0,0) -- (1,0) node[above, right] {\large $r_2$};
+		\draw[->, line width=0.6mm, blue] (0,0) -- (1,2) node[above, above] {\large $b_1$};
+		\draw[->, line width=0.6mm, blue] (0,0) -- (2,1) node[above, right] {\large $b_2$};
+	\end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+	\begin{tikzpicture}
+		\foreach \x in {-6,...,6}
+			\foreach \y in {-4,...,4}
+				\fill[gray!60] (\x,\y) circle (0.05);
+		
+		\fill[gray!90] (0,0) circle (0.1) node[gray!90, below] at (0,0) {O};
+		\draw[->, line width=0.6mm, darkgreen!80] (0,0) -- (0,1) node[above, above] {\large $r_1$};
+		
+		\draw[->, line width=0.6mm, darkgreen!80] (0,0) -- (1,0) node[below, below] {\large $r_2$};
+		\draw[->, line width=0.6mm, darkgreen!40] (1,0) -- (2,0);
+		\draw[->, line width=0.6mm, darkgreen!40] (2,0) -- (2,1);
+		
+		\draw[->, line width=0.6mm, blue] (0,0) -- (1,2) node[above, above] {\large $b_1$};
+		\draw[->, line width=0.6mm, blue] (0,0) -- (2,1) node[above, right] {\large $b_2$};
+	\end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+	\begin{tikzpicture}
+		\foreach \x in {-6,...,6}
+			\foreach \y in {-4,...,4}
+				\fill[gray!60] (\x,\y) circle (0.05);
+		
+		\fill[gray!90] (0,0) circle (0.1) node[gray!90, below] at (0,0) {O};
+		\draw[->, line width=0.6mm, darkgreen!80] (0,0) -- (0,1) node[left, left] {\large $r_1$};
+		\draw[->, line width=0.6mm, darkgreen!40] (0,1) -- (0,2);
+		\draw[->, line width=0.6mm, darkgreen!40] (0,2) -- (1,2);
+		
+		\draw[->, line width=0.6mm, darkgreen!80] (0,0) -- (1,0) node[below, below] {\large $r_2$};
+		
+		
+		\draw[->, line width=0.6mm, blue] (0,0) -- (1,2) node[above, above] {\large $b_1$};
+		\draw[->, line width=0.6mm, blue] (0,0) -- (2,1) node[above, right] {\large $b_2$};
+	\end{tikzpicture}
+\end{frame}
+
+\subsection{GGH Verschl{\"u}ssung$^1$}
+\begin{frame}
+	\frametitle{GGH Verschl{\"u}ssung}
+	Private key:
+	$R = \begin{pmatrix}
+		\mathbf{r}_1 \\ \mathbf{r}_2 
+	\end{pmatrix}$
+	\\
+	Public key:
+	$B = \begin{pmatrix}
+		\mathbf{b}_1 \\ \mathbf{b}_2 
+	\end{pmatrix}$
+	\\
+	Encrypt \textbf{m}:\\
+	\hspace{1.0em} $\mathbf{v} = \mathbf{m}B$\\
+	\hspace{1.0em} $\mathbf{c} = \mathbf{v} + \mathbf{e}$\\
 	
+	Decrypt \textbf{c}:\\
+	\hspace{1.0em} $\mathbf{v^{\prime}} = \lfloor\mathbf{c}R^{-1}\rceil  R$\\
+	\hspace{1.0em} $\mathbf{m^{\prime}} = \mathbf{v^{\prime}}B^{-1}$
+	
+	\footnotetext[1]{Basieren auf \cite{Thijs2015_LatticeCryptography}}
+\end{frame}
+
+\begin{frame}
+	
+	\begin{tikzpicture}[remember picture, overlay]
+%		\foreach \x in {-6,...,6}
+%			\foreach \y in {-4,...,4}
+%				\fill[gray!60] ([shift={(\x,\y)}]current page.center) circle (0.05);
+		
+		\fill[gray!90] (current page.center) circle (0.1) node[below, gray!90] {O};
+	\end{tikzpicture}
+	
+	Private key:
+	$R = \begin{pmatrix}
+		\mathbf{r}_1 \\ \mathbf{r}_2 
+	\end{pmatrix}$
+	\\
+	Public key:
+	$B = \begin{pmatrix}
+		\mathbf{b}_1 \\ \mathbf{b}_2 
+	\end{pmatrix}$
+	\\
+	Encrypt \textbf{m}:\\
+	\hspace{1.0em} $\mathbf{v} = \mathbf{m}B$\\
+	\hspace{1.0em} $\mathbf{c} = \mathbf{v} + \mathbf{e}$\\
+	
+	Decrypt \textbf{c}:\\
+	\hspace{1.0em} $\mathbf{v^{\prime}} = \lfloor\mathbf{c}R^{-1}\rceil  R$\\
+	\hspace{1.0em} $\mathbf{m^{\prime}} = \mathbf{v^{\prime}}B^{-1}$
+	
+	\footnotetext[1]{Basieren auf \cite{Thijs2015_LatticeCryptography}}
+\end{frame}
+
+\begin{frame}
+	\begin{tikzpicture}[remember picture,overlay]
+		\fill[gray!90] (current page.center) circle (0.1) node[below, gray!90] {O};
+		\draw[->, line width=0.6mm, darkgreen!80] (current page.center) -- ++(0,1) node[above] {\large $r_1$};
+		\draw[->, line width=0.6mm, darkgreen!80] (current page.center) -- ++(1,0) node[above right] {\large $r_2$};
+	\end{tikzpicture}
+	
+	Private key:
+	\textcolor{darkgreen!80}{%
+		$R =
+		\begin{pmatrix}
+			\mathbf{r}_1 \\[0.3em] 
+			\mathbf{r}_2
+		\end{pmatrix}$
+	}
+	\\
+	Public key:
+	$B = \begin{pmatrix}
+		\mathbf{b}_1 \\ \mathbf{b}_2 
+	\end{pmatrix}$
+	\\
+	Encrypt \textbf{m}:\\
+	\hspace{1.0em} $\mathbf{v} = \mathbf{m}B$\\
+	\hspace{1.0em} $\mathbf{c} = \mathbf{v} + \mathbf{e}$\\
+	
+	\textcolor{gray!80}{Decrypt \textcolor{gray!80}{\textbf{c}}:\\}
+	\hspace{1.0em} \textcolor{gray!80}{$\mathbf{v^{\prime}} = \lfloor\mathbf{c}R^{-1}\rceil  R$}\\
+	\hspace{1.0em} \textcolor{gray!80}{$\mathbf{m^{\prime}} = \mathbf{v^{\prime}}B^{-1}$}
+	
+	\footnotetext[1]{Basieren auf \cite{Thijs2015_LatticeCryptography}}
+\end{frame}
+
+\begin{frame}
+	\begin{tikzpicture}[remember picture,overlay]
+		\foreach \x in {-6,...,6}
+			\foreach \y in {-4,...,4}
+				\fill[gray!60] ([shift={(\x,\y)}]current page.center) circle (0.05);
+		
+		\fill[gray!90] (current page.center) circle (0.1) node[below, gray!90] {O};
+		\draw[->, line width=0.6mm, darkgreen!80] (current page.center) -- ++(0,1) node[above] {\large $r_1$};
+		\draw[->, line width=0.6mm, darkgreen!80] (current page.center) -- ++(1,0) node[above right] {\large $r_2$};
+	\end{tikzpicture}
+	
+	Private key:
+	\textcolor{darkgreen!80}{%
+		$R =
+		\begin{pmatrix}
+			\mathbf{r}_1 \\[0.3em] 
+			\mathbf{r}_2
+		\end{pmatrix}$
+	}
+	\\
+	Public key:
+	$B = \begin{pmatrix}
+		\mathbf{b}_1 \\ \mathbf{b}_2 
+	\end{pmatrix}$
+	\\
+	Encrypt \textbf{m}:\\
+	\hspace{1.0em} $\mathbf{v} = \mathbf{m}B$\\
+	\hspace{1.0em} $\mathbf{c} = \mathbf{v} + \mathbf{e}$\\
+	
+	\textcolor{gray!80}{Decrypt \textcolor{gray!80}{\textbf{c}}:\\}
+	\hspace{1.0em} \textcolor{gray!80}{$\mathbf{v^{\prime}} = \lfloor\mathbf{c}R^{-1}\rceil  R$}\\
+	\hspace{1.0em} \textcolor{gray!80}{$\mathbf{m^{\prime}} = \mathbf{v^{\prime}}B^{-1}$}
+	
+	\footnotetext[1]{Basieren auf \cite{Thijs2015_LatticeCryptography}}
+\end{frame}
+
+\begin{frame}
+	\begin{tikzpicture}[remember picture,overlay]
+		\foreach \x in {-6,...,6}
+			\foreach \y in {-4,...,4}
+				\fill[gray!60] ([shift={(\x,\y)}]current page.center) circle (0.05);
+		
+		\fill[gray!90] (current page.center) circle (0.1) node[below, gray!90] {O};
+		\draw[->, line width=0.6mm, darkgreen!80] (current page.center) -- ++(0,1) node[above] {\large $r_1$};
+		\draw[->, line width=0.6mm, darkgreen!80] (current page.center) -- ++(1,0) node[above right] {\large $r_2$};
+		\draw[->, line width=0.6mm, blue] (current page.center) -- ++(1,2) node[above] {\large $b_1$};
+		\draw[->, line width=0.6mm, blue] (current page.center) -- ++(2,1) node[above right] {\large $b_2$};
+	\end{tikzpicture}
+	
+	Private key: 
+	\textcolor{darkgreen!80}{%
+		$R =
+		\begin{pmatrix}
+			\mathbf{r}_1 \\[0.3em] 
+			\mathbf{r}_2
+		\end{pmatrix}$
+	}
+	\\
+	Public key:
+	\textcolor{blue}{%
+	$B = \begin{pmatrix}
+		\mathbf{b}_1 \\[0.3em] 
+		\mathbf{b}_2
+	\end{pmatrix}$
+	}
+	\\
+	Encrypt \textbf{m}:\\
+	\hspace{1.0em} $\mathbf{v} = \mathbf{m}B$\\
+	\hspace{1.0em} $\mathbf{c} = \mathbf{v} + \mathbf{e}$\\
+	
+	\textcolor{gray!80}{Decrypt \textcolor{gray!80}{\textbf{c}}:\\}
+	\hspace{1.0em} \textcolor{gray!80}{$\mathbf{v^{\prime}} = \lfloor\mathbf{c}R^{-1}\rceil  R$}\\
+	\hspace{1.0em} \textcolor{gray!80}{$\mathbf{m^{\prime}} = \mathbf{v^{\prime}}B^{-1}$}
+	
+	\footnotetext[1]{Basieren auf \cite{Thijs2015_LatticeCryptography}}
+\end{frame}
+
+\begin{frame}
+	\begin{tikzpicture}[remember picture,overlay]
+		\foreach \x in {-6,...,6}
+		\foreach \y in {-4,...,4}
+		\fill[gray!60] ([shift={(\x,\y)}]current page.center) circle (0.05);
+		
+		\fill[gray!90] (current page.center) circle (0.1) node[below, gray!90] {O};
+		\draw[->, line width=0.6mm, darkgreen!80] (current page.center) -- ++(0,1) node[above] {\large $r_1$};
+		\draw[->, line width=0.6mm, darkgreen!80] (current page.center) -- ++(1,0) node[above right] {\large $r_2$};
+		\draw[->, line width=0.6mm, blue] (current page.center) -- ++(1,2) node[above] {\large $b_1$};
+		\draw[->, line width=0.6mm, blue] (current page.center) -- ++(2,1) node[above right] {\large $b_2$};
+		
+		\fill[violet] ([shift={(4,1)}]current page.center) circle (0.1) node[below, violet] {v};
+	\end{tikzpicture}
+	
+	Private key: 
+	\textcolor{darkgreen!80}{%
+		$R =
+		\begin{pmatrix}
+			\mathbf{r}_1 \\[0.3em] 
+			\mathbf{r}_2
+		\end{pmatrix}$
+	}
+	\\
+	Public key:
+	\textcolor{blue}{%
+		$B = \begin{pmatrix}
+			\mathbf{b}_1 \\[0.3em] 
+			\mathbf{b}_2
+		\end{pmatrix}$
+	}
+	\\
+	Encrypt \textbf{m}:\\
+	\hspace{1.0em} \textcolor{violet}{$\mathbf{v} = \mathbf{m}B$}\\
+	\hspace{1.0em} $\mathbf{c} = \mathbf{v} + \mathbf{e}$\\
+	
+	\textcolor{gray!80}{Decrypt \textcolor{gray!80}{\textbf{c}}:\\}
+	\hspace{1.0em} \textcolor{gray!80}{$\mathbf{v^{\prime}} = \lfloor\mathbf{c}R^{-1}\rceil  R$}\\
+	\hspace{1.0em} \textcolor{gray!80}{$\mathbf{m^{\prime}} = \mathbf{v^{\prime}}B^{-1}$}
+	
+	\footnotetext[1]{Basieren auf \cite{Thijs2015_LatticeCryptography}}
+\end{frame}
+
+\begin{frame}
+	\begin{tikzpicture}[remember picture,overlay]
+		\foreach \x in {-6,...,6}
+		\foreach \y in {-4,...,4}
+		\fill[gray!60] ([shift={(\x,\y)}]current page.center) circle (0.05);
+		
+		\fill[gray!90] (current page.center) circle (0.1) node[below, gray!90] {O};
+		\draw[->, line width=0.6mm, darkgreen!80] (current page.center) -- ++(0,1) node[above] {\large $r_1$};
+		\draw[->, line width=0.6mm, darkgreen!80] (current page.center) -- ++(1,0) node[above right] {\large $r_2$};
+		\draw[->, line width=0.6mm, blue] (current page.center) -- ++(1,2) node[above] {\large $b_1$};
+		\draw[->, line width=0.6mm, blue] (current page.center) -- ++(2,1) node[above right] {\large $b_2$};
+		
+		\fill[violet] ([shift={(4,1)}]current page.center) circle (0.1) node[below, violet] {v};
+		\fill[red] ([shift={(3.7,1.3)}]current page.center) circle (0.1) node[below, red] {c};
+	\end{tikzpicture}
+	
+	Private key: 
+	\textcolor{darkgreen!80}{%
+		$R =
+		\begin{pmatrix}
+			\mathbf{r}_1 \\[0.3em] 
+			\mathbf{r}_2
+		\end{pmatrix}$
+	}
+	\\
+	Public key:
+	\textcolor{blue}{%
+		$B = \begin{pmatrix}
+			\mathbf{b}_1 \\[0.3em] 
+			\mathbf{b}_2
+		\end{pmatrix}$
+	}
+	\\
+	Encrypt \textbf{m}:\\
+	\hspace{1.0em} \textcolor{violet}{$\mathbf{v} = \mathbf{m}B$}\\
+	\hspace{1.0em} \textcolor{red}{$\mathbf{c} = \mathbf{v} + \mathbf{e}$}\\
+	
+	\textcolor{gray!80}{Decrypt \textcolor{gray!80}{\textbf{c}}:\\}
+	\hspace{1.0em} \textcolor{gray!80}{$\mathbf{v^{\prime}} = \lfloor\mathbf{c}R^{-1}\rceil  R$}\\
+	\hspace{1.0em} \textcolor{gray!80}{$\mathbf{m^{\prime}} = \mathbf{v^{\prime}}B^{-1}$}
+	
+	\footnotetext[1]{Basieren auf \cite{Thijs2015_LatticeCryptography}}
+\end{frame}
+
+%%%%%%%
+
+\begin{frame}
+	\begin{tikzpicture}[remember picture,overlay]
+		
+		% vertical grid lines
+		\foreach \x in {-6,...,6}
+			\draw[dashed, gray!30] ([shift={(\x,-5)}]current page.center) -- ([shift={(\x,4.4)}]current page.center);
+		
+		% horizontal grid lines
+		\foreach \y in {-4,...,4}
+			\draw[dashed, gray!30] ([shift={(-7,\y)}]current page.center) -- ([shift={(7,\y)}]current page.center);
+		
+		\foreach \x in {-6,...,6}
+			\foreach \y in {-4,...,4}
+				\fill[gray!60] ([shift={(\x,\y)}]current page.center) circle (0.05);
+				
+		\fill[gray!90] (current page.center) circle (0.1) node[below, gray!90] {O};
+		\draw[->, line width=0.6mm, darkgreen!80] (current page.center) -- ++(0,1) node[above] {\large $r_1$};
+		\draw[->, line width=0.6mm, darkgreen!80] (current page.center) -- ++(1,0) node[above right] {\large $r_2$};
+		\draw[->, line width=0.6mm, gray!80] (current page.center) -- ++(1,2) node[above] {\large $b_1$};
+		\draw[->, line width=0.6mm, gray!80] (current page.center) -- ++(2,1) node[above right] {\large $b_2$};
+		
+		\fill[red] ([shift={(3.7,1.3)}]current page.center) circle (0.1) node[below, red] {c};
+	\end{tikzpicture}
+	
+	\textcolor{black}{Private key:} 
+	\textcolor{darkgreen!80}{%
+		$R =
+		\begin{pmatrix}
+			\mathbf{r}_1 \\[0.3em] 
+			\mathbf{r}_2
+		\end{pmatrix}$
+	}
+	\\
+	\textcolor{gray!80}{Public key:}
+	\textcolor{gray!80}{%
+		$B = \begin{pmatrix}
+			\mathbf{b}_1 \\[0.3em] 
+			\mathbf{b}_2
+		\end{pmatrix}$
+	}
+	\\
+	\textcolor{gray!80}{Encrypt \textbf{m}:\\}
+	\hspace{1.0em} \textcolor{gray!80}{$\mathbf{v} = \mathbf{m}B$}\\
+	\hspace{1.0em} \textcolor{gray!80}{$\mathbf{c} = \mathbf{v} + \mathbf{e}$}\\
+	
+	\textcolor{black!80}{Decrypt \textcolor{red}{\textbf{c}}:\\}
+	\hspace{1.0em} $\mathbf{v^{\prime}} = \lfloor\mathbf{c}R^{-1}\rceil  R$\\
+	\hspace{1.0em} $\mathbf{m^{\prime}} = \mathbf{v^{\prime}}B^{-1}$
+	
+	\footnotetext[1]{Basieren auf \cite{Thijs2015_LatticeCryptography}}
+\end{frame}
+
+\begin{frame}
+	\begin{tikzpicture}[remember picture,overlay]
+		
+		% vertical grid lines
+		\foreach \x in {-6,...,6}
+			\draw[dashed, gray!30] ([shift={(\x,-5)}]current page.center) -- ([shift={(\x,4.4)}]current page.center);
+		
+		% horizontal grid lines
+		\foreach \y in {-4,...,4}
+			\draw[dashed, gray!30] ([shift={(-7,\y)}]current page.center) -- ([shift={(7,\y)}]current page.center);
+		
+		\foreach \x in {-6,...,6}
+			\foreach \y in {-4,...,4}
+				\fill[gray!60] ([shift={(\x,\y)}]current page.center) circle (0.05);
+		
+		\draw[red] ([shift={(-7,1)}]current page.center) -- ([shift={(7,1)}]current page.center);
+		\draw[red] ([shift={(4,-5)}]current page.center) -- ([shift={(4,4.4)}]current page.center);
+		
+		\fill[gray!90] (current page.center) circle (0.1) node[below, gray!90] {O};
+		\draw[->, line width=0.6mm, darkgreen!80] (current page.center) -- ++(0,1) node[above] {\large $r_1$};
+		\draw[->, line width=0.6mm, darkgreen!80] (current page.center) -- ++(1,0) node[above right] {\large $r_2$};
+		\draw[->, line width=0.6mm, gray!80] (current page.center) -- ++(1,2) node[above] {\large $b_1$};
+		\draw[->, line width=0.6mm, gray!80] (current page.center) -- ++(2,1) node[above right] {\large $b_2$};
+		
+		\fill[red] ([shift={(3.7,1.3)}]current page.center) circle (0.1) node[below, red] {c};
+	\end{tikzpicture}
+	
+	\textcolor{black}{Private key:} 
+	\textcolor{darkgreen!80}{%
+		$R =
+		\begin{pmatrix}
+			\mathbf{r}_1 \\[0.3em] 
+			\mathbf{r}_2
+		\end{pmatrix}$
+	}
+	\\
+	\textcolor{gray!80}{Public key:}
+	\textcolor{gray!80}{%
+		$B = \begin{pmatrix}
+			\mathbf{b}_1 \\[0.3em] 
+			\mathbf{b}_2
+		\end{pmatrix}$
+	}
+	\\
+	\textcolor{gray!80}{Encrypt \textbf{m}:\\}
+	\hspace{1.0em} \textcolor{gray!80}{$\mathbf{v} = \mathbf{m}B$}\\
+	\hspace{1.0em} \textcolor{gray!80}{$\mathbf{c} = \mathbf{v} + \mathbf{e}$}\\
+	
+	\textcolor{black!80}{Decrypt \textcolor{red}{\textbf{c}}:\\}
+	\hspace{1.0em} $\mathbf{v^{\prime}} = \lfloor\mathbf{c}R^{-1}\rceil  R$\\
+	\hspace{1.0em} $\mathbf{m^{\prime}} = \mathbf{v^{\prime}}B^{-1}$
+	
+	\footnotetext[1]{Basieren auf \cite{Thijs2015_LatticeCryptography}}
+\end{frame}
+
+\begin{frame}
+	\begin{tikzpicture}[remember picture,overlay]
+		
+		% vertical grid lines
+		\foreach \x in {-6,...,6}
+			\draw[dashed, gray!30] ([shift={(\x,-5)}]current page.center) -- ([shift={(\x,4.4)}]current page.center);
+		
+		% horizontal grid lines
+		\foreach \y in {-4,...,4}
+			\draw[dashed, gray!30] ([shift={(-7,\y)}]current page.center) -- ([shift={(7,\y)}]current page.center);
+		
+		\foreach \x in {-6,...,6}
+			\foreach \y in {-4,...,4}
+				\fill[gray!60] ([shift={(\x,\y)}]current page.center) circle (0.05);
+		
+		\draw[red] ([shift={(-7,1)}]current page.center) -- ([shift={(7,1)}]current page.center);
+		\draw[red] ([shift={(4,-5)}]current page.center) -- ([shift={(4,4.4)}]current page.center);
+		
+		\fill[gray!90] (current page.center) circle (0.1) node[below, gray!90] {O};
+		\draw[->, line width=0.6mm, darkgreen!80] (current page.center) -- ++(0,1) node[above] {\large $r_1$};
+		\draw[->, line width=0.6mm, darkgreen!80] (current page.center) -- ++(1,0) node[above right] {\large $r_2$};
+		\draw[->, line width=0.6mm, gray!80] (current page.center) -- ++(1,2) node[above] {\large $b_1$};
+		\draw[->, line width=0.6mm, gray!80] (current page.center) -- ++(2,1) node[above right] {\large $b_2$};
+		
+		\fill[violet] ([shift={(4,1)}]current page.center) circle (0.1) node[below, violet] {$v^{\prime}$};
+		\fill[red] ([shift={(3.7,1.3)}]current page.center) circle (0.1) node[below, red] {c};
+	\end{tikzpicture}
+	
+	\textcolor{black}{Private key:} 
+	\textcolor{darkgreen!80}{%
+		$R =
+		\begin{pmatrix}
+			\mathbf{r}_1 \\[0.3em] 
+			\mathbf{r}_2
+		\end{pmatrix}$
+	}
+	\\
+	\textcolor{gray!80}{Public key:}
+	\textcolor{gray!80}{%
+		$B = \begin{pmatrix}
+			\mathbf{b}_1 \\[0.3em] 
+			\mathbf{b}_2
+		\end{pmatrix}$
+	}
+	\\
+	\textcolor{gray!80}{Encrypt \textbf{m}:\\}
+	\hspace{1.0em} \textcolor{gray!80}{$\mathbf{v} = \mathbf{m}B$}\\
+	\hspace{1.0em} \textcolor{gray!80}{$\mathbf{c} = \mathbf{v} + \mathbf{e}$}\\
+	
+	\textcolor{black!80}{Decrypt \textcolor{red}{\textbf{c}}:\\}
+	\hspace{1.0em} \textcolor{violet}{$\mathbf{v^{\prime}} = \lfloor\mathbf{c}R^{-1}\rceil  R$}\\
+	\hspace{1.0em} \textcolor{black}{$\mathbf{m^{\prime}} = \mathbf{v^{\prime}}B^{-1}$}
+	
+	\footnotetext[1]{Basieren auf \cite{Thijs2015_LatticeCryptography}}
+\end{frame}
+
+
+%%%%%%%%%%%
+
+\begin{frame}
+	\begin{tikzpicture}[remember picture,overlay]
+		
+%		% parameters
+%		\def\mmax{5} % range in b1 direction
+%		\def\nmax{5} % range in b2 direction
+%		
+%		% basis vectors
+%		\coordinate (O) at (current page.center);
+%		\coordinate (b1) at (1,2);
+%		\coordinate (b2) at (2,1);
+%		
+%		% draw lattice points
+%		\foreach \m in {-5,...,5}
+%		\foreach \n in {-5,...,5}
+%		\fill[gray!60] ($(O)+\m*(b1)+\n*(b2)$) circle (0.05);
+%		
+%		% draw b1-direction grid lines
+%		\foreach \n in {-5,...,5} {
+%			\draw[gray!30]
+%			($(O)+\n*(b2)+-5*(b1)$) -- ($(O)+\n*(b2)+5*(b1)$);
+%		}
+%		
+%		% draw b2-direction grid lines
+%		\foreach \m in {-5,...,5} {
+%			\draw[gray!30]
+%			($(O)+\m*(b1)+-5*(b2)$) -- ($(O)+\m*(b1)+5*(b2)$);
+%		}
+		
+%		\foreach \x in {-6,...,6}
+%			\foreach \y in {-4,...,4}
+%				\fill[gray!60] ([shift={(\x,\y)}]current page.center) circle (0.05);
+%		
+
+		\fill[gray!90] (current page.center) circle (0.1) node[below, gray!90] {O};
+		\draw[->, line width=0.6mm, gray!80] (current page.center) -- ++(0,1) node[above] {\large $r_1$};
+		\draw[->, line width=0.6mm, gray!80] (current page.center) -- ++(1,0) node[above right] {\large $r_2$};
+		\draw[->, line width=0.6mm, blue] (current page.center) -- ++(1,2) node[above] {\large $b_1$};
+		\draw[->, line width=0.6mm, blue] (current page.center) -- ++(2,1) node[above right] {\large $b_2$};
+		
+%		\fill[violet] ([shift={(4,1)}]current page.center) circle (0.1) node[below, violet] {$v^{\prime}$};
+		\fill[red] ([shift={(3.7,1.3)}]current page.center) circle (0.1) node[below, red] {c};
+	\end{tikzpicture}
+	
+	\textcolor{gray!80}{Private key:} 
+	\textcolor{gray!80}{%
+		$R =
+		\begin{pmatrix}
+			\mathbf{r}_1 \\[0.3em] 
+			\mathbf{r}_2
+		\end{pmatrix}$
+	}
+	\\
+	\textcolor{blue}{Public key:}
+	\textcolor{blue}{%
+		$B = \begin{pmatrix}
+			\mathbf{b}_1 \\[0.3em] 
+			\mathbf{b}_2
+		\end{pmatrix}$
+	}
+	\\
+	\textcolor{gray!80}{Encrypt \textbf{m}:\\}
+	\hspace{1.0em} \textcolor{gray!80}{$\mathbf{v} = \mathbf{m}B$}\\
+	\hspace{1.0em} \textcolor{gray!80}{$\mathbf{c} = \mathbf{v} + \mathbf{e}$}\\
+	
+	\textcolor{black!80}{Decrypt \textcolor{red}{\textbf{c}}:\\}
+	\hspace{1.0em} \textcolor{black}{$\mathbf{v^{\prime}} = \lfloor\mathbf{c}R^{-1}\rceil  R$}\\
+	\hspace{1.0em} \textcolor{black}{$\mathbf{m^{\prime}} = \mathbf{v^{\prime}}B^{-1}$}
+	
+	\footnotetext[1]{Basieren auf \cite{Thijs2015_LatticeCryptography}}
 \end{frame}
