@@ -1,4 +1,43 @@
 \subsection{E91}
-\begin{frame}[allowframebreaks]
+\begin{frame}
+	\frametitle{E91}
+	-- Entwickelt durch Artur Ekert im Jahr 1991\\
+	-- Verwendung von Bell States \\
+	-- Auswahl zufälliger Polarisationsbasen\\
+	-- Bob nutzt die inverse Interpretation von Alice \\
+		\hspace{0.5em} (unter Verwendung von $|\mathnormal{\Psi}^{(-)}\rangle$) \\
+	\vspace{1em}
+	\hspace{0.5em}
+	\begin{tabular}{c|c|c|c|c}
+		Basis & H & V & D & A \\
+		\hline
+		Alice & 0 & 1 & 0 & 1 \\
+		\hline
+		Bob & 1 & 0 & 1 & 0 \\
+	\end{tabular}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Mathematischer Beweis$^{1}$ I}
+	\begin{align}
+		|\mathnormal{\Psi}^{(-)}\rangle = \frac{1}{\sqrt{2}} \left\{|H\rangle_{A}|V\rangle_{B} - |V\rangle_{A}|H\rangle_{B}\right\}
+	\end{align}
+	Übergang zur diagonalen Basis:
+	\begin{align*}
+		|H\rangle_A = a_H^+|0\rangle = \frac{1}{\sqrt{2}}(a_D^++a_A^+)|0\rangle = \frac{1}{\sqrt{2}}(|D\rangle_A+|A\rangle_A) \\
+		|V\rangle_A = a_H^+|0\rangle = \frac{1}{\sqrt{2}}(a_D^+-a_A^+)|0\rangle = \frac{1}{\sqrt{2}}(|D\rangle_A-|A\rangle_A)
+	\end{align*}
+	\footnotetext[1]{Aus \cite{Chekhova_Lecture4_12} {\"ubernommen}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Mathematischer Beweis$^{1}$ II}
+	\framesubtitle{Photon B}
+	\begin{alignat*}{2}
+		|\mathnormal{\Psi}^{(-)}\rangle & = \frac{1}{2\sqrt{2}}\left\{(|D\rangle_A+|A\rangle_A)(|D\rangle_B-|A\rangle_B) - (|D\rangle_A+|A\rangle_A)(|D\rangle_B-|A\rangle_B)\right\}\\
+		& = \frac{1}{2\sqrt{2}}\left\{|A\rangle_A|D\rangle_B - |D\rangle_A|A\rangle_B)\right\}
+	\end{alignat*}
 	
+	% Um zu überprüfen, ob jemand mithört, testen Alice und Bob die Bellschen Ungleichungen.
+	\footnotetext[1]{Aus \cite{Chekhova_Lecture4_12} {\"ubernommen}}
 \end{frame}

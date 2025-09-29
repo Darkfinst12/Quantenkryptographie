@@ -1,7 +1,97 @@
 \subsection{BB84}
 \begin{frame}%[allowframebreaks]
 	\frametitle{BB84}
-	Entwickelt durch Charles Bennett und Gilles Brassard im Jahr 1984
+	-- Entwickelt durch Charles Bennett und Gilles Brassard im Jahr 1984\\
+	-- Lässt sich mit jedem quantenmechanischen Zwei-Zustandssystem\\
+		\hspace{0.5em} durchführen\\
+	-- Keine Verschränkung notwendig\\
+	-- Meistens die Verwendung der linearen Polarisationszustände von \\ 
+		\hspace{0.5em} Photonen
+\end{frame}
+
+\begin{frame}
+	\frametitle{Polarisationsrichtungen$^1$}
+	\framesubtitle{H ,V ,D ,A}
+	\footnotetext[1]{lineare Polarisation}
+	%	\vspace{-2em}
+	\begin{alertblock}{Basen (Photonenzust{\"a}nde):}
+		Orthogonal: H/V – Z-Basis\\
+		\hspace{0.5em}  H, $0^\circ$: horizontal \textrightarrow\\
+		\hspace{0.5em}  V, $90^\circ$: vertikal  \textuparrow\\
+		Schr{\"a}g: $+$/$-$ – X-Basis\\
+		\hspace{0.5em}  $+$, $45^\circ$: diagonal $\nearrow$\\
+		\hspace{0.5em}  $-$, $-45^\circ$: antidiagonal $\nwarrow$\\
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Alice}
+	\small
+	\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
+		Photon & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10  \\
+		Basis & $+$/$-$ & $+$/$-$ & $h$/$v$ & $+$/$-$ & $h$/$v$ & $h$/$v$ & $h$/$v$ & $+$/$-$ & $+$/$-$ & $h$/$v$ \\
+		Zustand & $+$ & $-$ & $h$ & $+$ & $h$ & $h$ & $h$ & $-$ & $+$ & $h$\\
+		Bit & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 \\
+	\end{tabular}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Bob}
+	\small
+	\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
+		Photon & \underline{1} & \underline{2} & \underline{3} & 4 & 5 & 6 & \underline{7} & 8 & \underline{9} &  \underline{10} \\
+		Basis & $+$/$-$ & $+$/$-$ & $h$/$v$ & $h$/$v$ & $+$/$-$ & $+$/$-$ & $h$/$v$ & $h$/$v$ & $+$/$-$ & $h$/$v$ \\
+		Zustand & $+$ & $-$ & $h$ & $+$ & $h$ & $h$ & $h$ & $-$ & $+$ & $h$\\
+		Bit & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\
+	\end{tabular}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Basis-Austausch}
+	\small
+	\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
+		Photon & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10  \\
+		\hline
+		Alice Basis & \tiny $+$/$-$ & \tiny $+$/$-$ & \tiny $h$/$v$ & \tiny $+$/$-$ & \tiny $h$/$v$ & \tiny $h$/$v$ & \tiny $h$/$v$ & \tiny $+$/$-$ & \tiny $+$/$-$ & \tiny $h$/$v$ \\
+		Bit & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 \\
+		\hline
+		Bob Basis & \tiny $+$/$-$ & \tiny $+$/$-$ & \tiny $h$/$v$ & \tiny $h$/$v$ & \tiny $+$/$-$ & \tiny $+$/$-$ & \tiny $h$/$v$ & \tiny $h$/$v$ & \tiny $+$/$-$ & \tiny $h$/$v$ \\
+		Bit & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\
+		\hline
+		Key & 1 & 0 & 0 & - & - & - & 0 & - & 1 & 0 \\
+	\end{tabular}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Eve}
+	\small
+	\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
+		Photon & 1 & 2 & 3 & \underline{4} & \underline{5} & 6 & \underline{7} & 8 & 9 & 10 \\
+		Basis & $h$/$v$ & $h$/$v$ & $+$/$-$ & $+$/$-$ & $h$/$v$ & $+$/$-$ & $h$/$v$ & $h$/$v$ & $h$/$v$ & $+$/$-$ \\
+		Zustand & $v$ & $v$ & $-$ & $+$ & $h$ & $-$ & $h$ & $v$ & $h$ & $-$\\
+		Bit & 1 & 1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 \\
+	\end{tabular}
+\end{frame}
+
+\begin{frame}
+	\small
+	\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
+		Photon & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10  \\
+		\hline
+		Alice Basis & \tiny $+$/$-$ & \tiny $+$/$-$ & \tiny $h$/$v$ & \tiny $+$/$-$ & \tiny $h$/$v$ & \tiny $h$/$v$ & \tiny $h$/$v$ & \tiny $+$/$-$ & \tiny $+$/$-$ & \tiny $h$/$v$ \\
+		Bit & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 \\
+		\hline
+		Bob Basis${^1}$ & \tiny $+$/$-$ & \tiny $+$/$-$ & \tiny $h$/$v$ & \tiny $h$/$v$ & \tiny $+$/$-$ & \tiny $+$/$-$ & \tiny $h$/$v$ & \tiny $h$/$v$ & \tiny $+$/$-$ & \tiny $h$/$v$ \\
+		Bit & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\
+		\hline
+		Eve Basis & \tiny $h$/$v$ & \tiny $h$/$v$ & \tiny $+$/$-$ & \tiny $+$/$-$ & \tiny $h$/$v$ & \tiny $+$/$-$ & \tiny $h$/$v$ & \tiny $h$/$v$ & \tiny $h$/$v$ & \tiny $+$/$-$ \\
+		Bit & 1 & 1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 \\
+		\hline
+		Bob Basis${^2}$ & \tiny $+$/$-$ & \tiny $+$/$-$ & \tiny $h$/$v$ & \tiny $h$/$v$ & \tiny $+$/$-$ & \tiny $+$/$-$ & \tiny $h$/$v$ & \tiny $h$/$v$ & \tiny $+$/$-$ & \tiny $h$/$v$ \\
+		Bit & 1 & 1 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 1 \\
+		\midrule
+		\multicolumn{11}{l}{${^1}$: Ohne Eve; ${^2}$: mit Eve}
+	\end{tabular}
 \end{frame}
 
 \begin{frame}
